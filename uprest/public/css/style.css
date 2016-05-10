@@ -1,0 +1,530 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #fbd546;
+  background-color: white;
+}
+
+body, html {
+  /* important */
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #acaea9; }
+
+a:hover {
+  color: white; }
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0; }
+
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+header {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color:white;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s; }
+  header h1#logo {
+    display: inline-block;
+    height: 150px;
+    line-height: 150px;
+    float: left;
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    color: #35404f;
+    font-weight: 350;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+header nav {
+    display: inline-block;
+    float: right; }
+    header nav a {
+      line-height: 150px;
+      margin-left: 20px;
+      color:#fbd546;
+        background-color:white;
+        padding:7px;
+        border: 1px solid;
+        border-color: #fbd546;
+      font-weight: 700;
+      font-size: 18px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      header nav a:hover {
+        color: white;
+      background-color: #fbd546;
+      padding: 7px;
+      }
+  header.smaller {
+    height: 75px; }
+    header.smaller h1#logo {
+      width: 150px;
+      height: 75px;
+      line-height: 75px;
+      font-size: 30px; }
+    header.smaller nav a {
+      line-height: 75px; }
+
+
+@media only screen and (min-width: 768px) {
+  
+}
+
+ 
+
+
+.cd-main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+.cd-fixed-bg h1, .cd-fixed-bg h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 90%;
+  max-width: 1170px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.cd-fixed-bg.cd-bg-1 {
+  background-image: url("../img/cd-background-1.jpg");
+}
+.cd-fixed-bg.cd-bg-2 {
+  background-image: url("../img/cd-background-2.jpg");
+}
+.cd-fixed-bg.cd-bg-3 {
+  background-image: url("../img/cd-background-3.jpg");
+}
+.cd-fixed-bg.cd-bg-4 {
+  background-image: url("../img/cd-background-4.jpg");
+}
+@media only screen and (min-width: 768px) {
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+  .cd-fixed-bg h1, .cd-fixed-bg h2 {
+    font-size: 48px;
+    font-weight: 300;
+  }
+}
+
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 100%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.cd-scrolling-bg.cd-color-1 {
+  background-color: #3f8e8a;
+  color: #3d3536;
+}
+.cd-scrolling-bg.cd-color-2 {
+  background-color: #35404f;
+  color: #fbd546;
+}
+.cd-scrolling-bg.cd-color-3 {
+  background-color: #3f8e8a;
+  color: #3d3536;
+}
+@media only screen and (min-width: 768px) {
+  .cd-scrolling-bg {
+    padding: 8em 0;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 300;
+  }
+}
+
+.footer-text{
+width: 100%;
+    text-align: center;
+    float: none;
+    display: block;
+    padding-top: 600px;
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 660px) {
+  /* =Header
+  -------------------------------------------------------------- */
+  header h1#logo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center; }
+  header nav {
+    display: block;
+    float: none;
+    height:50px;
+    text-align: center;
+    margin: 0 auto; }
+    header nav a {
+      line-height: 50px;
+      margin: 0px auto; 
+    }
+  header.smaller {
+    height: 75px; }
+    header.smaller h1#logo {
+      height: 40px;
+      line-height: 40px;
+      font-size: 30px; }
+    header.smaller nav {
+      height: 35px; }
+      header.smaller nav a {
+        line-height: 35px; } }
+@media all and (max-width: 600px) {
+  .container {
+    width: 100%; }
+}
+
+/* Disable text select 
+---------------------------------------------------------*/
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+/*Back to top
+--------------------------------------------------------*/
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #fbd546 url("../img/arrow.png") no-repeat center 43%;
+    border: 2px solid;
+    border-color: white;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+a:hover.back-to-top {
+	background-color: #e1b642;
+}
+
+
+/*Divisions
+---------------------------------------------------------*/
+.shadow{
+    margin:auto;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+.floatl{
+    float:left;
+}
+.floatr{
+    float:right;   
+}
+
+.containerbox1
+{
+   width:30%;
+    
+    position: relative;
+  min-height:50%;
+    height:320px;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    background-color: #3d3536;
+    color: #fbd546;
+}
+
+
+.containerbox2
+{
+   width:30%;
+
+  position: relative; 
+    
+  min-height: 50%;
+  line-height: 1.6;
+  
+  z-index: 2;
+    background-color: #3f8e8a;
+}
+
+.containerbox1 h2#left{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin: 20px; 
+}
+
+.containerbox1 hr#left{
+    width:100px;  
+    margin-left:20px;
+    background-color: #fbd546;
+    height:5px;
+}
+
+.containerbox1 h2#right{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+    margin: 20px; 
+}
+
+.containerbox1 hr#right{
+    width:100px;  
+    margin-left:110px;
+    background-color: #fbd546;
+    height:5px;
+}
+
+
+
+.videoframe {
+width: 234px;
+height: 160px;
+overflow: hidden;
+    
+}
+
+.videoframe img {
+width: 234px;
+height: 160px;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+    position:relative;
+    
+}
+
+.videoframe:hover  img{
+transform: scale(1.1);
+overflow: hidden;
+background-color: rgba(255,255,255,1);
+color:black;
+}
+
+.videoframe div{
+    display: block;
+    position: absolute;
+    z-index:5;
+    background-color:rgba(255,255,255,0);
+    border: 2px solid;
+    border-color:white;
+    text-align: center;
+    color:white;
+    top:60px;
+    left:60px;
+    padding:6px;
+    font-weight: bold;
+}
+
+.videoframe:hover div{
+    background-color: rgba(255,255,255,1);
+    color:black;
+}
+
+
+/*Sign In Modal
+----------------------------------------------------*/
+.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.5);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 500px;
+        height:300px;
+		position: relative;
+		margin: 10% auto;
+		padding: 20px;
+		border-radius: 3px;
+		background: #35404f;
+	}
+
+	.close {
+		background: #505050;
+		color: #fbd546;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #3d3536;
+    color:#fbd546;}
+
+.modalDialog > div > h2{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modelDialog > div > div{
+    display:block;
+    margin-left: 50px;;
+   text-align: center;
+}
+
+
+.button
+{
+    display: block;
+    height: 50px;
+    background-color: #35404f;
+    color: #fff; 
+    width:400px;
+}
+
+form{
+    margin: auto;
+    width:400px;
+}
+
+form.mod{
+    margin: 0 auto;
+    width:400px;
+}
+.buttonmod
+{
+    display: block;
+    height: 50px;
+    background-color: #3f8e8a;
+    color: #fff; 
+    width:400px;
+}
+
+
+

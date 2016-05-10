@@ -1,0 +1,464 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #fbd546;
+   background: url("../img/articlebg.jpg") no-repeat center;
+    background-attachment: fixed;
+}
+
+body, html {
+  /* important */
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+   }
+
+a:hover {
+  color: #fbd546;
+   }
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0; }
+
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+
+header {
+  width: 100%;
+  height: 75px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color:white;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s; }
+  header h1#logo {
+    display: inline-block;
+   width: 150px;
+      height: 75px;
+      line-height: 75px;
+      font-size: 30px; 
+    float: left;
+    font-family: "Oswald", sans-serif;
+   
+    color: #35404f;
+    font-weight: 350;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+header nav {
+    display: inline-block;
+    float: right; }
+    header nav a {
+      line-height: 75px;
+      margin-left: 20px;
+      color:#fbd546;
+        background-color:white;
+        padding:7px;
+        border: 1px solid;
+        border-color: #fbd546;
+      font-weight: 700;
+      font-size: 18px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+      header nav a:hover {
+        color: white;
+      background-color: #fbd546;
+      padding: 7px;
+            line-height: 75px;
+      }
+
+
+
+.footer-text{
+width:30%
+    text-align: left;
+    float: left;
+    display: block;
+    margin-top: 25px;
+   
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 660px) {
+  /* =Header
+  -------------------------------------------------------------- */
+  header h1#logo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+   height: 40px;
+      line-height: 40px;
+      font-size: 30px; 
+   
+    text-align: center; }
+  header nav {
+    display: block;
+    float: none;
+    height:35px;
+    text-align: center;
+    margin: 0 auto; }
+    header nav a {
+      line-height: 35px;
+      margin: 0px auto; 
+    }
+    
+   }
+@media all and (max-width: 600px) {
+  .container {
+    width: 100%; }
+}
+
+/* Disable text select 
+---------------------------------------------------------*/
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+
+/*Sign In Modal
+----------------------------------------------------*/
+.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.5);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 500px;
+        height:300px;
+		position: relative;
+		margin: 10% auto;
+		padding: 20px;
+		border-radius: 3px;
+		background: #35404f;
+	}
+
+	.close {
+		background: #505050;
+		color: #fbd546;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #3d3536;
+    color:#fbd546;}
+
+.modalDialog > div > h2{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modelDialog > div > div{
+    display:block;
+    margin-left: 50px;;
+   text-align: center;
+}
+
+
+
+form.mod{
+    margin: 0 auto;
+    width:400px;
+}
+.buttonmod
+{
+    display: block;
+    height: 50px;
+    background-color: #4aaaa5;
+    color: #fff; 
+    width:400px;
+}
+
+
+
+/* =Info Bar
+-------------------------------------------------------------- */
+#info-bar {
+  background-color: white;
+    height:75px;
+    width:100%;
+    bottom:0px;
+    position: fixed;
+    z-index: 100;
+}
+
+.searchbox{
+        width:300px;
+    margin:15px;
+    float:right;
+      border: 1px solid;
+    border-color: lightgray;
+    height:40px;
+}
+
+.search{
+    background: transparent;
+    border:none;
+    width: 200px;
+    height:30px;
+    float:left;
+    margin-left: 15px;
+    margin-top: 4px;
+    
+}
+
+/*article boxes*/
+
+.contentnews
+{
+    background:rgba(255,255,255,0.9);
+       width:70%;
+    margin-top: 12%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 4px;
+  min-height:50%;
+    height:100%;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    float:left;
+    color: white;
+}
+
+
+.contentnews div{
+    padding: 20px;   
+}
+
+
+.contentnews div div{
+      width:30px;
+    height:30px;
+    position:absolute;
+    right:5px;
+    top:5px;
+}
+
+.fav{
+  background: url("../img/fav.png") no-repeat center;   
+}
+
+.fav-select{
+    background: url("../img/fav-selected.png") no-repeat center;
+}
+
+
+.contentnews div h1{
+    color:black;   
+     font-size: 40px;
+    font-weight: bold;
+    text-align: left; 
+}
+
+.contentnews div p{
+   color:darkgray;   
+   overflow: hidden;
+    
+}
+
+.contentnews div p.news{
+   color:black;  
+    font-size:18px;
+   overflow: hidden;
+    
+}
+
+.contentnews div span.headin{
+   color:black;  
+    font-size:24px;
+   overflow: hidden;
+   font-weight: bold;
+    
+}
+
+
+.news1
+{
+     background-color: #fff;
+    border:1px solid;
+    border-color:darkgray;
+       width:31%;
+    margin:5px;
+    
+    position:relative;
+  float:left;
+    height:500px;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    color: white;
+}
+
+.news2
+{
+     background-color: #fff;
+    border:1px solid;
+    border-color:darkgray;
+       width:66%;
+    margin:5px;
+     float:left;
+    position:relative;
+  
+    height:240px;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    color: white;
+}
+
+.news3
+{
+      background-color: #fff;
+    border:1px solid;
+    border-color:darkgray;
+       width:32.5%;
+    margin:5px;
+     float:left;
+    position:relative;
+  
+    height:250px;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    color: white;
+}
+
+.readmore1
+{
+    position: absolute; 
+    width:0;
+    height: 0;
+    text-align: center;
+    text-emphasis-color:#000000;
+    color: #000000;
+    font-weight: bold;
+    font-size:35px;
+    background-color: rgba(255,255,255,0);
+    bottom: 0;
+    right: 0;
+    margin-top: 420px;
+    margin-right: 8px;
+}
+
+.readmore2
+{
+    position: absolute; 
+    width:0;
+    height: 0;
+    text-align: center;
+    text-emphasis-color:#000000;
+    color: #000000;
+    font-weight: bold;
+    font-size:35px;
+    background-color: rgba(255,255,255,0);
+    bottom: 0;
+    right: 0;
+    margin-top: 160px;
+    margin-right: 8px;
+}
+
+.readmore3
+{
+    position: absolute; 
+    width:0;
+    height: 0;
+    text-align: center;
+    text-emphasis-color:#000000;
+    color: #000000;
+    font-weight: bold;
+    font-size:35px;
+    background-color: rgba(255,255,255,0);
+    bottom: 0;
+    right: 0;
+    margin-top: 172px;
+    margin-right: 8px;
+    
+}

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="../css/style-search.css"> <!-- Resource style -->
+    
+    
+    
+ <!-- js -->   
+   
+    
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    
+    <script type="text/javascript" src="../js/modernizer.js"></script>
+    
+    
+    
+	
+  	
+	<title>uprest.</title>
+</head>
+<body oncontextmenu="return false" class="noselect">
+    
+    
+    <div class="header"><div class="searchbox"><img src="../img/search.png" height="30px" width="30px" style="float:left;margin-left:25px;margin-top:11px;"><input type="text" placeholder="Search for what you like" class="search"></div><br/><br/><font size="5px">Search Your Interest</font></div>
+		<div class="interests">
+                <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/business.jpg" /> 
+                        <div class="abcd">BUSINESS</div>
+                    </div></div>
+            
+    
+             
+         
+                 <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/entertainment.jpg" /> 
+                        <div class="abcd">ENTERTAINMENT</div>
+                    </div>
+                </div>
+
+    <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/fashion.jpg" /> 
+                        <div class="abcd">FASHION</div>
+                    </div>
+                </div>
+    
+    <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/food.jpg" /> 
+                        <div class="abcd">FOOD</div>
+                    </div>
+                </div>
+    
+    <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/football.jpg" /> 
+                        <div class="abcd">FOOTBALL</div>
+                    </div>
+                </div>
+    <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/home&garden.jpg" /> 
+                        <div class="abcd">HOME &amp; GARDEN</div>
+                    </div>
+                </div>
+        <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/india.jpg" /> 
+                        <div class="abcd">INDIA</div>
+                    </div>
+                </div>
+<div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/indiancricket.jpg" /> 
+                        <div class="abcd">INDIAN CRICKET</div>
+                    </div>
+                </div>
+            
+              <div class="containerbox">
+                    <div class="videoframe not-selected"> 
+                    <img src="../img/interests/india.jpg" /> 
+                        <div class="abcd">INDIA</div>
+                    </div>
+                </div>
+            
+            
+            <div class="containerbox">
+                  
+                    </div>
+                </div>
+    
+     <div class="containerbox">
+                  
+                    </div>
+                </div>
+    
+     <div class="containerbox">
+                  
+                    </div>
+                </div>
+    
+    
+    </div>
+    
+    
+    
+    
+    <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="articles">
+        <center><font size="5px" >Search Your Article</font></br></br></center>
+                
+             <div class="news1">
+                <b><span class="headin">HEADING</span></b>
+                <p>Source</p>
+                <p class="news">News</p>
+                <div class="readmore1"><a href="page.html">...</a></div>
+            </div>
+             <div class="news2">
+                            
+                  <b><span class="headin">HEADING</span></b>
+                <p>Source</p>
+                <p class="news">News</p>
+                <div class="readmore2"><a href="page.html">...</a></div>
+            </div>
+             <div class="news3">
+                     
+                  <b><span class="headin">HEADING</span></b>
+                <p>Source</p>
+                <p class="news">News</p>
+                <div class="readmore3"><a href="page.html">...</a></div>
+            </div>   
+    </div>
+    
+    <footer class="hidden disp"><div id="info-bar">
+    <div class="container clearfix">
+        <span class="footer-text"><font color="#fff">Finally there!</font></span>
+</div></footer>
+    
+    
+    
+    <script type="text/javascript">
+
+$('.videoframe').on('click', function (e) {
+    $(this).children('.abcd').toggleClass("color");
+});
+        
+    $('.videoframe').on('click', function (e) {
+    $(this).toggleClass("not-selected");
+});
+        
+        $('.videoframe').on('click', function (e) {
+    $(this).toggleClass("scale");
+});
+        
+        var numItems = $('.scale').length
+        
+        if(numItems>6)
+        {
+    
+    $('.disp').toggleClass(".hidden");
+        }
+</script>
+	
+    
+        
+<script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top"></a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ($(window).scrollTop() > amountScrolled) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('body').animate({
+		scrollTop: 0
+	}, 'fast');
+	return false;
+});
+</script> 
+    
+   
+	
+</body>
+</html>

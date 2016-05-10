@@ -1,0 +1,378 @@
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  background-color: white;
+}
+
+body, html {
+  /* important */
+  height: 100%;
+}
+
+
+
+/* Disable text select 
+---------------------------------------------------------*/
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+/*Back to top
+--------------------------------------------------------*/
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #fbd546 url("../img/arrow.png") no-repeat center 43%;
+    border: 2px solid;
+    border-color: white;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+a:hover.back-to-top {
+	background-color: #e1b642;
+}
+
+/*Main components
+--------------------------------------------------------*/
+.interests{
+    display: block;
+    margin:0 auto;
+    margin-left: 12%;
+    margin-top: 2%;
+    position: relative;
+    height: auto;
+    
+}
+
+.articles{
+    display: block;
+    margin-top: 30%;
+    margin-left: 12.5%;
+    position: relative;
+    min-height: 65%;
+    width: 75%;
+    
+}
+
+.articles div{
+    padding: 20px;   
+}
+
+
+.articles div div{
+      width:30px;
+    height:30px;
+    position:absolute;
+    right:5px;
+    top:5px;
+}
+
+.articles div h1{
+    color:black;   
+     font-size: 40px;
+    font-weight: bold;
+    text-align: left; 
+}
+
+.articles div p{
+   color:darkgray;   
+   overflow: hidden;
+    
+}
+
+.articles div p.news{
+   color:black;  
+    font-size:18px;
+   overflow: hidden;
+    
+}
+
+.articles div span.headin{
+   color:black;  
+    font-size:24px;
+   overflow: hidden;
+   font-weight: bold;
+    
+}
+
+.articles div div a{
+    text-decoration: none;
+    color:black;
+}
+
+.articles div div a:hover{
+    text-decoration: none;
+    color:#e1b642;
+}
+
+
+
+.news1
+{
+     background-color: #fff;
+    border:1px solid;
+    border-color:darkgray;
+       width:32%;
+    margin:5px;
+    
+    position:relative;
+  float:left;
+    height:250px;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    color: white;
+}
+
+.news2
+{
+     background-color: #fff;
+    border:1px solid;
+    border-color:darkgray;
+       width:32%;
+    margin:5px;
+     float:left;
+    position:relative;
+  
+    height:250px;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    color: white;
+}
+
+.news3
+{
+      background-color: #fff;
+    border:1px solid;
+    border-color:darkgray;
+       width:32%;
+    margin:5px;
+     float:left;
+    position:relative;
+  
+    height:250px;
+  line-height: 1.6;
+  overflow:hidden;
+  z-index: 2;
+    color: white;
+}
+
+.readmore1
+{
+    position: absolute; 
+    width:0;
+    height: 0;
+    text-align: center;
+    text-emphasis-color:#000000;
+    color: #000000;
+    font-weight: bold;
+    font-size:35px;
+    background-color: rgba(255,255,255,0);
+    bottom: 0;
+    right: 0;
+    margin-top: 160px;
+    margin-right: 8px;
+}
+
+.readmore2
+{
+    position: absolute; 
+    width:0;
+    height: 0;
+    text-align: center;
+    text-emphasis-color:#000000;
+    color: #000000;
+    font-weight: bold;
+    font-size:35px;
+    background-color: rgba(255,255,255,0);
+    bottom: 0;
+    right: 0;
+    margin-top: 160px;
+    margin-right: 8px;
+}
+
+.readmore3
+{
+    position: absolute; 
+    width:0;
+    height: 0;
+    text-align: center;
+    text-emphasis-color:#000000;
+    color: #000000;
+    font-weight: bold;
+    font-size:35px;
+    background-color: rgba(255,255,255,0);
+    bottom: 0;
+    right: 0;
+    margin-top: 172px;
+    margin-right: 8px;
+    
+}
+
+.header{
+    margin-top: 5%;
+display: block;
+margin-left: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-size: 1.875rem;
+  color: black;
+ z-index: 5;
+}
+
+.searchbox{
+        width:500px;
+    margin:5px auto;
+      border: 1px solid;
+    border-color: lightgray;
+    height:55px;
+}
+
+
+/*Divisions
+---------------------------------------------------------*/
+
+.containerbox
+{
+   margin: 3px;
+
+  position: relative; 
+   float:left; 
+  line-height: 1.6;
+  
+  z-index: 2;
+    height: 160px;
+    width: 234px;
+}
+
+.videoframe {
+width: 234px;
+height: 160px;
+overflow: hidden;
+    
+}
+
+.videoframe img {
+width: 234px;
+height: 160px;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
+    position:relative;
+    
+}
+
+.not-selected:hover  img{
+transform: scale(1.1);
+overflow: hidden;
+
+}
+
+.videoframe div{
+    display: block;
+    position: absolute;
+    z-index:5;
+    
+    border: 2px solid;
+    border-color:white;
+    text-align: center;
+    color:white;
+    top:60px;
+    left:60px;
+    padding:6px;
+    font-weight: bold;
+}
+
+.not-selected:hover div{
+    background-color: rgba(255,255,255,1);
+    color:black;
+}
+
+.scale img{
+      transform: scale(1.1);
+    overflow: hidden; 
+}
+
+.color{
+    
+     background-color: rgba(74, 170, 165,0.8);
+    color:black;
+    padding: 20px;
+}
+
+.search{
+    background: transparent;
+    border:none;
+    width: 400px;
+    height:40px;
+    float:left;
+    margin-left: 15px;
+    margin-top: 6px;
+    
+}
+
+.hidden{
+    
+    visibility: hidden;   
+}
+
+/* =Info Bar
+-------------------------------------------------------------- */
+#info-bar {
+  background-color: #35404f;
+    height:75px;
+    width:100%;
+    bottom:0px;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.footer-text{
+width:30%
+    text-align: center;
+c
+    display: block;
+    margin-top: 25px;
+   
+}
+
+
+
+
+
